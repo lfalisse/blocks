@@ -19,7 +19,7 @@ function magnify(imgID, zoom) {
   img.parentElement.insertBefore(glass, img);
 
   /* Set background properties for the magnifier glass: */
-  glass.style.backgroundImage = "url('" + img.src + "')";
+  glass.style.backgroundImage = "url('img/Blockbg.png')";
   glass.style.backgroundRepeat = "no-repeat";
   glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
   bw = 3;
@@ -88,22 +88,30 @@ html, body{
 	max-height: 100%;
 	cursor: none;
 }
+#crosby2{
+  max-height: 100%;
+  cursor: none;
+}
 .img-magnifier-glass {
   position: absolute;
   border: 3px solid #000;
   border-radius: 0%;
   cursor: none;
-  width: 190px;
-  height: 240px;
+  width: 145px;
+  height: 190px;
+}
+img{
+  cursor: none;
 }
 </style>
 </head>
 <body>
 	<div class='wrapper'>
-		<img id='crosby' src="img/Block1CROP.jpg">
+		<img id='crosby' src="img/BlockFrontGrey.png">
+    <img id='crosby2' src="img/Blockbg.png">
 	</div>
 	<div class='wrapper'>
-		<img id='crosby' src="img/Block1CROP.jpg">
+		<img id='crosby' src="img/Block2.jpg">
 	</div>
 	<div class='topcorner'>
 		<!-- <button onclick="magnify('crosby', 2);"><img src="magnifying-glass-zoom.png"></button> -->
@@ -111,7 +119,7 @@ html, body{
 <script>
 document.addEventListener("DOMContentLoaded", function(event){
 /* Execute the magnify function: */
-magnify("crosby", 2);
+magnify("crosby", 1);
 /* Specify the id of the image, and the strength of the magnifier glass: */
  });
 </script>	
