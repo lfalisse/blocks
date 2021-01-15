@@ -19,7 +19,7 @@ function magnify(imgID, zoom) {
   img.parentElement.insertBefore(glass, img);
 
   /* Set background properties for the magnifier glass: */
-  glass.style.backgroundImage = "url('img/Blockbg.png')";
+  glass.style.backgroundImage = "url('img/Block1CROP.jpg')";
   glass.style.backgroundRepeat = "no-repeat";
   glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
   bw = 3;
@@ -69,7 +69,8 @@ function magnify(imgID, zoom) {
  }
 </script>
 <style>
-html * {cursor:none!important}
+* { cursor: none !important; }
+
 html, body{
 	height: 99.2%;
 	background-color: black;
@@ -97,8 +98,8 @@ html, body{
   border: 3px solid #000;
   border-radius: 0%;
   cursor: none;
-  width: 145px;
-  height: 190px;
+  width: 160px;
+    height: 190px;
 }
 img{
   cursor: none;
@@ -108,7 +109,7 @@ img{
 <body>
 	<div class='wrapper'>
 		<img id='crosby' src="img/BlockFrontGrey.png">
-    <img id='crosby2' src="img/Blockbg.png">
+    <img id='crosby2' src="img/Block1CROP.jpg">
 	</div>
 	<div class='wrapper'>
 		<img id='crosby' src="img/Block2.jpg">
@@ -119,7 +120,7 @@ img{
 <script>
 document.addEventListener("DOMContentLoaded", function(event){
 /* Execute the magnify function: */
-magnify("crosby", 1);
+magnify("crosby", 1.4);
 /* Specify the id of the image, and the strength of the magnifier glass: */
  });
 </script>	
